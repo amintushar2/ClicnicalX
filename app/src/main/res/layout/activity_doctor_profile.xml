@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorProfile">
+
+d    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="230dp"
+        android:layout_height="221dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/docEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/solaiman_lipi"
+        android:gravity="center"
+        android:text=" MBBS,Fcps"
+        android:textSize="18dp"
+        android:textColor="#5B00FF"
+        app:layout_constraintBottom_toTopOf="@+id/visitTime12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/visitTime12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/solaiman_lipi"
+        android:gravity="center"
+        android:text="রোগি দেখার ১০ টা থেকে ১২ টা"
+        android:textColor="#5B00FF"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/datePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/docEducation" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/solaiman_lipi"
+        android:gravity="center"
+        android:text="ডাঃ সেলীম রেজা"
+        android:textColor="#5B00FF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/solaiman_lipi"
+        android:gravity="center"
+        android:text=" জেনারেল মেডিসিন"
+        android:textSize="20dp"
+        android:textColor="#5B00FF"
+        app:layout_constraintBottom_toTopOf="@+id/docEducation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dfBtnNext"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="14dp"
+        android:text="পরবতি ধাপ  >"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:theme="@style/Theme.MaterialComponents"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/docLPrevButton"
+        app:rippleColor="#7F5CFA"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/docLPrevButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="14dp"
+        android:text="পূর্ব"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:theme="@style/Theme.MaterialComponents"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dfBtnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#7F5CFA"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/solaiman_lipi"
+        android:text="তারিখ নির্বাচন করুন"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/chipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitTime12" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/solaiman_lipi"
+            android:text="১০-১১টা"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/solaiman_lipi"
+            android:text="১০-১১টা"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/solaiman_lipi"
+            android:gravity="center"
+            android:text="১০-১১টা"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/solaiman_lipi"
+            android:text="১০-১১টা"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:checkedIconVisible="true" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/solaiman_lipi"
+            android:text="১০-১১টা"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:checkedIconVisible="true" />
+    </com.google.android.material.chip.ChipGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
