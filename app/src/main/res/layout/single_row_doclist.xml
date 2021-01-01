@@ -4,12 +4,14 @@
     android:layout_height="wrap_content"
      android:id="@+id/cardviewItem"
      android:animateLayoutChanges="true"
-    android:layout_margin="5dp"
+    android:layout_margin="8dp"
     app:cardElevation="4dp">
 
      <LinearLayout
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="4dp"
+         android:layout_marginRight="2dp"
          android:orientation="vertical">
 
          <LinearLayout
@@ -35,9 +37,9 @@
                          android:id="@+id/docName"
                          android:layout_width="wrap_content"
                          android:layout_height="match_parent"
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
-                         android:padding="5dp"
+                         android:padding="8dp"
                          android:text="ডাঃ সেলিম রেজা"
                          android:textColor="@color/colorPrimaryDark"
                          android:textSize="24sp"
@@ -48,7 +50,7 @@
                          android:id="@+id/docTitle"
                          android:layout_width="match_parent"
                          android:layout_height="match_parent"
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
                          android:padding="3dp"
                          android:paddingLeft="6dp"
@@ -60,7 +62,7 @@
                          android:id="@+id/hospitalName"
                          android:layout_width="match_parent"
                          android:layout_height="match_parent"
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
                          android:padding="3dp"
                          android:text="ল্যাব এইড হসপিটাল"
@@ -72,7 +74,7 @@
                          android:layout_width="match_parent"
                          android:layout_height="match_parent"
 
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
                          android:padding="3dp"
                          android:text="রোগি দেখার সময়"
@@ -83,7 +85,7 @@
                          android:id="@+id/timeVisit"
                          android:layout_width="match_parent"
                          android:layout_height="match_parent"
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
                          android:padding="3dp"
                          android:text="10 AM - 8:00 pm"
@@ -92,7 +94,7 @@
                      <TextView
                          android:layout_width="match_parent"
                          android:layout_height="match_parent"
-                         android:layout_marginLeft="4dp"
+                         android:layout_marginLeft="16dp"
                          android:fontFamily="@font/solaiman_lipi"
                          android:padding="3dp"
                          android:text="রোগি দেখার ফি ঃ ৫০০ টাকা"
@@ -105,38 +107,38 @@
 
              <com.mikhaellopez.circularimageview.CircularImageView
                  android:id="@+id/docPic"
-                 android:layout_width="146dp"
+                 android:layout_width="135dp"
                  android:layout_height="158dp"
                  android:src="@drawable/doc1"
                  app:civ_border_color="#CFCFCF"
                  app:civ_border_width="3dp"
+                 android:layout_marginRight="20dp"
                  app:civ_shadow="true"
                  app:civ_shadow_color="#3f51b5"
                  app:civ_shadow_radius="10" />
 
          </LinearLayout>
+
          <LinearLayout
              android:id="@+id/looout"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:visibility="gone"
-             android:orientation="horizontal">
+             android:orientation="horizontal"
+             android:visibility="gone">
 
              <Button
                  android:id="@+id/profile"
                  android:layout_width="200dp"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="5dp"
-                 android:text="Doctor Profile"
-                />
+                 android:text="Doctor Profile" />
 
              <Button
                  android:id="@+id/appointment"
                  android:layout_width="200dp"
                  android:layout_height="wrap_content"
                  android:layout_marginLeft="5dp"
-                 android:text="Book Apointment"
-                  />
+                 android:text="Book Apointment" />
 
          </LinearLayout>
 

@@ -1,41 +1,81 @@
 package com.raslab.clicnicalx.pojos;
 
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
+public class DoctorListDataSet {
+        @SerializedName("Id")
+        @Expose
+        private Integer id;
+        @SerializedName("HospitalId")
+        @Expose
+        private Integer hospitalId;
+        @SerializedName("Name")
+        @Expose
+        private String name;
+        @SerializedName("Designation")
+        @Expose
+        private String designation;
+        @SerializedName("Speciality")
+        @Expose
+        private Integer speciality;
+        @SerializedName("Mobile")
+        @Expose
+        private String mobile;
+        @SerializedName("HospitalName")
+        @Expose
+        private String hospitalName;
+        @SerializedName("SecialityName")
+        @Expose
+        private String secialityName;
 
-    public class DoctorListDataSet {
-        String docName;
-        String docTitle;
-        String hospitalName;
-        int docPicId;
-
-        String docHours;
-        public DoctorListDataSet( int docPicId,String docName, String docTitle, String hospitalName, String docHours) {
-            this.docPicId = docPicId;
-            this.docName = docName;
-            this.docTitle = docTitle;
-            this.hospitalName = hospitalName;
-            this.docHours = docHours;
+        public Integer getId() {
+            return id;
         }
 
-        public DoctorListDataSet() {
+        public void setId(Integer id) {
+            this.id = id;
         }
 
-        public String getDocName() {
-            return docName;
+        public Integer getHospitalId() {
+            return hospitalId;
         }
 
-        public void setDocName(String docName) {
-            this.docName = docName;
+        public void setHospitalId(Integer hospitalId) {
+            this.hospitalId = hospitalId;
         }
 
-        public String getDocTitle() {
-            return docTitle;
+        public String getName() {
+            return name;
         }
 
+        public void setName(String name) {
+            this.name = name;
+        }
 
-        public void setDocTitle(String docTitle) {
-            this.docTitle = docTitle;
+        public String getDesignation() {
+            return designation;
+        }
+
+        public void setDesignation(String designation) {
+            this.designation = designation;
+        }
+
+        public Integer getSpeciality() {
+            return speciality;
+        }
+
+        public void setSpeciality(Integer speciality) {
+            this.speciality = speciality;
+        }
+
+        public String getMobile() {
+            return mobile;
+        }
+
+        public void setMobile(String mobile) {
+            this.mobile = mobile;
         }
 
         public String getHospitalName() {
@@ -46,20 +86,11 @@ package com.raslab.clicnicalx.pojos;
             this.hospitalName = hospitalName;
         }
 
-        public int getDocPicId() {
-            return docPicId;
+        public String getSecialityName() {
+            return secialityName;
         }
 
-        public void setDocPicId(int docPicId) {
-            this.docPicId = docPicId;
-        }
-
-
-        public String getDocHours() {
-            return docHours;
-        }
-
-        public void setDocHours(String docHours) {
-            this.docHours = docHours;
+        public void setSecialityName(String secialityName) {
+            this.secialityName = secialityName;
         }
 }

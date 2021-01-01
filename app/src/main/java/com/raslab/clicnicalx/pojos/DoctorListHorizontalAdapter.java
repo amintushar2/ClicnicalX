@@ -15,8 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.raslab.clicnicalx.DoctorProfile;
-import com.raslab.clicnicalx.MainActivity;
+import com.raslab.clicnicalx.DoctorListActivity;
 import com.raslab.clicnicalx.R;
 
 import java.util.List;
@@ -24,9 +23,9 @@ import java.util.List;
 public class DoctorListHorizontalAdapter extends  RecyclerView.Adapter<DoctorListHorizontalAdapter.DoctorViewHolder> {
 
     private Context context;
-    private List<DoctorListDataSet> docList;
+    private List<DoctorSpecialityDataSet> docList;
 
-    public DoctorListHorizontalAdapter(Context context, List<DoctorListDataSet> docList) {
+    public DoctorListHorizontalAdapter(Context context, List<DoctorSpecialityDataSet> docList) {
         this.context = context;
         this.docList = docList;
     }
@@ -38,19 +37,23 @@ public class DoctorListHorizontalAdapter extends  RecyclerView.Adapter<DoctorLis
         View view = inflater.inflate(R.layout.single_row_horizontal_doclist, parent, false);
         return new DoctorViewHolder(view);
     }
-
+    public void setDocSpecilityList(List<DoctorSpecialityDataSet>doctorSpecialityDataSets) {
+        this.docList=doctorSpecialityDataSets;
+        notifyDataSetChanged();
+    }
     @Override
     public void onBindViewHolder(@NonNull DoctorViewHolder holder, int position) {
 
-        holder.docPic.setImageResource(docList.get(position).getDocPicId());
-        holder.docName.setText(docList.get(position).docName);
+//        holder.docPic.setImageResource(docList.get(position).getDocPicId());
+        holder.specilityTV.setText(docList.get(position).getName());
 //        holder.docTitle.setText(docList.get(position).docTitle);
 //        holder.hospitalName.setText(docList.get(position).hospitalName);
 //        holder.visitTime.setText(docList.get(position).docHours);
        holder.itemView.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(context, DoctorProfile.class);
+               Intent intent = new Intent(context, DoctorListActivity.class);
+               intent.putExtra("id",docList.get(position).getId());
                context.startActivity(intent);
 
            }
@@ -64,7 +67,7 @@ public class DoctorListHorizontalAdapter extends  RecyclerView.Adapter<DoctorLis
     }
 
     public class DoctorViewHolder extends RecyclerView.ViewHolder {
-        TextView docName,docTitle,hospitalName,visitTime;
+        TextView specilityTV,docTitle,hospitalName,visitTime;
         ImageView docPic;
         CardView cardView;
         Button btn1,btn2;
@@ -75,7 +78,7 @@ public class DoctorListHorizontalAdapter extends  RecyclerView.Adapter<DoctorLis
         public DoctorViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            docName = itemView.findViewById(R.id.doc_horizontal_name);
+            specilityTV = itemView.findViewById(R.id.doc_horizontal_name);
 //            docTitle = itemView.findViewById(R.id.docTitle);
 //            hospitalName = itemView.findViewById(R.id.hospitalName);
 //            visitTime = itemView.findViewById(R.id.timeVisit);

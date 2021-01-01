@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.raslab.clicnicalx.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_doctorListFragemnt"
+            app:destination="@id/doctorListFragemnt" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorListFragemnt"
+        android:name="com.raslab.clicnicalx.DoctorListFragemnt"
+        android:label="fragment_doctor_list_fragemnt"
+        tools:layout="@layout/fragment_doctor_list_fragemnt" />
+    <fragment
+        android:id="@+id/bloodFragment"
+        android:name="com.raslab.clicnicalx.BloodFragment"
+        android:label="Blood Bank"
+        tools:layout="@layout/fragment_blood" />
+    <fragment
+        android:id="@+id/ambulanceFragment"
+        android:name="com.raslab.clicnicalx.AmbulanceFragment"
+        android:label="AMbulance"
+        tools:layout="@layout/fragment_ambulance" />
+</navigation>

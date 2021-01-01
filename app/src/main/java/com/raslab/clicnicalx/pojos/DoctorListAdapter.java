@@ -38,15 +38,14 @@ public class DoctorListAdapter extends  RecyclerView.Adapter<DoctorListAdapter.D
     @Override
     public void onBindViewHolder(@NonNull DoctorViewHolder holder, int position) {
 
-        holder.docPic.setImageResource(docList.get(position).getDocPicId());
-        holder.docName.setText(docList.get(position).docName);
-        holder.docTitle.setText(docList.get(position).docTitle);
-        holder.hospitalName.setText(docList.get(position).hospitalName);
-        holder.visitTime.setText(docList.get(position).docHours);
+//        holder.docPic.setImageResource(docList.get(position).getDocPicId());
+        holder.docName.setText(docList.get(position).getName());
+        holder.docTitle.setText(docList.get(position).getDesignation());
+        holder.hospitalName.setText(docList.get(position).getSecialityName());
+        holder.visitTime.setText(docList.get(position).getHospitalName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.lout.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -54,6 +53,12 @@ public class DoctorListAdapter extends  RecyclerView.Adapter<DoctorListAdapter.D
     @Override
     public int getItemCount() {
         return docList.size();
+    }
+
+    public void setDoclist(List<DoctorListDataSet>doctorListDataSetList) {
+        this.docList=doctorListDataSetList;
+        notifyDataSetChanged();
+
     }
 
     public class DoctorViewHolder extends RecyclerView.ViewHolder {
